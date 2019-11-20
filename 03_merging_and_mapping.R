@@ -10,9 +10,6 @@ library(tmap)
 # (list=ls())
 
 # Finding the paths to the files 
-desktop = "C:\\Users\\lpenido\\Desktop"
-main_dir = "C:\\Users\\lpenido\\Documents\\Deposits"
-map_dir  = "C:\\Users\\lpenido\\Documents\\Deposits\\US_County_Boundaries"
 deposits = "ALL_2018.csv"
 county_address = "US_County_Boundaries.shp"
 
