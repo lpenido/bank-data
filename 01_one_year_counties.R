@@ -16,8 +16,6 @@ library(tmap)
 
 rm(list=ls())
 
-main_dir = "C:\\Users\\lpenido\\Documents\\Deposits"
-map_dir  = "C:\\Users\\lpenido\\Documents\\Deposits\\US_County_Boundaries"
 deposits = "ALL_2018.csv"
 county_map = "US_County_Boundaries.shp"
 
