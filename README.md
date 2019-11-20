@@ -10,4 +10,4 @@ The CRA will apply to all institutions insured by the Federal Deposit Insurance 
 * Conclusions about the bank's performance
 * Discussion of the facts and data supporting the conclusions
 
-The emphasis on community here is because there is a very qualitative question regarding how community is defined in terms of geography. In part this will be determined by the inherent subjecitivty of the term as well as the bank and the regulator coming to an agreement as to a geographic area. For the purposes of this analysis, I will take the community to be the 
+The emphasis on community here is because there is a very qualitative question regarding how community is defined in terms of geography. In part this will be determined by the inherent subjecitivty of the term as well as the bank and the regulator coming to an agreement as to a geographic area. For the purposes of this analysis, I will take the community to be the county in which a bank has a branch presence.
