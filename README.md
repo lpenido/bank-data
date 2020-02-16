@@ -8,7 +8,7 @@ To-Do:
 2. Loop through to find yearly change for State and County
 3. Vizualize State level change using heatmap of change across state and year change
 4. Find State and County (Census?) data for socioeconomic stats: population, race, income, education, health, rent
-5. Add the variance of 10-year change, index by state and county 
+5. Add the variance of 10-year change, index by state and county \n
     i. Variance will be around the mean value. Value being change per 1000 people or percent change. 
 6. Vizualize bivariate relations with one another using scatterplots
 7. Determine classification for rural
