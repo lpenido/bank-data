@@ -1,42 +1,23 @@
 """
-3. Vizualize State level change using heatmap of change across state and year change
-
-Heatmaps look cool, but I'd like to filter out outliers since South Dakota kinda
-obscures other trends.
-
+This is primarily for my own reference. It is based off notes I wrote during a
+seaborn tutorial. I refer to this for the main arguments since I always get
+confused while making data viz.
 """
+
 import numpy as np
 import pandas as pd
 import os
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-general  = "/Users/lucaspenido/Desktop/bank-data"
-base_table = 'base_table.csv'
-state_deps = 'STNAMEBR_deposits.csv'
-state_prop_deps = 'STNAMEBR_prop_deposits.csv'
-state_prop_bran = 'STNAMEBR_prop_branches.csv'
+# Sample imports
+IMPORT = "/Users/lucaspenido/Desktop/bank-data/data/processed"
+os.chdir(IMPORT)
+file = "STNAMEBR-Prop-Branches.csv"
+index = file.split("-")[0]
+df = pd.read_csv(file, index_col=index)
 
 pd.options.display.float_format = '{:,.0f}'.format
-
-def load_save(path,file):
-
-    os.chdir(path)
-    df = pd.read_csv(file, encoding='utf-8')
-
-    df.reset_index(inplace=True)
-    df.STNAMEBR = df.STNAMEBR.astype(str)
-    df.set_index('STNAMEBR',inplace=True)
-    df.drop(['index'], axis=1, inplace=True)
-
-    print(df.dtypes)
-    print(df.head())
-
-    return df
-df = load_save(general,state_prop_bran)
-
-# df.loc['South Dakota', '2011'] = 70
-# print(df.loc['South Dakota', '2011'])
 
 def box_plot(df):
     sns.boxplot(data=df, showfliers=True)
@@ -45,7 +26,6 @@ def box_plot(df):
     plt.ylabel('Bank Deposits (in Billions)')
     plt.xlabel('Year')
     plt.show()
-# box_plot(df)
 
 def violin_plot(df):
     """
@@ -60,10 +40,9 @@ def violin_plot(df):
     plt.xlabel('Year')
 
     plt.show()
-# violin_plot(df)
 
 def heat_map(df):
-    sns.heatmap(df, annot=True, annot_kws={"fontsize":6})
+    sns.heatmap(df, annot=True, cmap="Greens", annot_kws={"fontsize":6})
 
     plt.title('Yearly Percent Change in Bank Branches')
     plt.ylabel('State')
@@ -71,7 +50,6 @@ def heat_map(df):
     sns.set(font_scale=0.8)
 
     plt.show()
-heat_map(df)
 
 def scatter_plot(df):
     '''
@@ -88,4 +66,3 @@ def scatter_plot(df):
                ) # hue by rural
 
     plt.show()
-# scatter_plot(df)
